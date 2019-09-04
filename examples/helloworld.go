@@ -66,7 +66,7 @@ func main() {
 		//v1.Get("/post/{:\\d+}/comment", comment)
 		//v1.Get("/post/{id}/comment", comment)
 		v1.Get("/post/:id/comment", comment)
-		v1.Get("/post/{id:\\d+/hello}", func(ctx *flex.Context) error {
+		v1.Get("/post/{id:\\d+}/hello", func(ctx *flex.Context) error {
 			return ctx.JSON(200, flex.M{
 				"id":   ctx.Param("id"),
 				"name": "hello",
